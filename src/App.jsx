@@ -1,7 +1,18 @@
-import AppRoutes from "./components/routes/AppRoutes";
+
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import AdminRoutes from "./routes/AdminRoutes";
+import FrontendRoutes from "./routes/FrontendRoutes";
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<FrontendRoutes />} />
+        <Route path="/admin/*" element={<AdminRoutes />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

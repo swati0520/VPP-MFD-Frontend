@@ -13,7 +13,10 @@ export default function AdminLayout() {
     document.documentElement.className = theme;
   }, [theme]);
 
-  const currentPath = location.pathname === "/" ? "dashboard" : location.pathname.replace("/", "");
+  const currentPath =
+    location.pathname === "/admin"
+      ? "dashboard"
+      : location.pathname.replace(/^\/admin\/?/, "");
   const pageTitle = currentPath.replace(/-/g, " ");
 
   return (

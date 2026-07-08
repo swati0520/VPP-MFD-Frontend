@@ -20,22 +20,22 @@ import {
 } from "lucide-react";
 
 const menus = [
-  { name: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
-  { name: "Home", path: "/home", icon: Home },
-  { name: "About", path: "/about", icon: Info },
-  { name: "Services", path: "/services", icon: Briefcase },
-  { name: "Gallery", path: "/gallery", icon: Image },
-  { name: "Testimonials", path: "/testimonials", icon: MessageSquare },
-  { name: "Team", path: "/team", icon: Users },
-  { name: "Blogs", path: "/blogs", icon: FileText },
-  { name: "Career", path: "/career", icon: GraduationCap },
-  { name: "Contact", path: "/contact", icon: Phone },
-  { name: "SEO", path: "/seo", icon: Search },
-  { name: "Settings", path: "/settings", icon: Settings },
-  { name: "Users", path: "/users", icon: UserCog },
-  { name: "Trade Hub", path: "/tradehub", icon: Building2 },
-  { name: "Disha", path: "/disha", icon: MapPinned },
-  { name: "Kushal Connection", path: "/kushal-connection", icon: Link },
+  { name: "Dashboard", path: "/admin/dashboard", icon: LayoutDashboard },
+  { name: "Home", path: "/admin/home", icon: Home },
+  { name: "About", path: "/admin/about", icon: Info },
+  { name: "Services", path: "/admin/services", icon: Briefcase },
+  { name: "Gallery", path: "/admin/gallery", icon: Image },
+  { name: "Testimonials", path: "/admin/testimonials", icon: MessageSquare },
+  { name: "Team", path: "/admin/team", icon: Users },
+  { name: "Blogs", path: "/admin/blogs", icon: FileText },
+  { name: "Career", path: "/admin/career", icon: GraduationCap },
+  { name: "Contact", path: "/admin/contact", icon: Phone },
+  { name: "SEO", path: "/admin/seo", icon: Search },
+  { name: "Settings", path: "/admin/settings", icon: Settings },
+  { name: "Users", path: "/admin/users", icon: UserCog },
+  { name: "Trade Hub", path: "/admin/tradehub", icon: Building2 },
+  { name: "Disha", path: "/admin/disha", icon: MapPinned },
+  { name: "Kushal Connection", path: "/admin/kushal-connection", icon: Link },
 ];
 
 export default function Sidebar({ isOpen }) {

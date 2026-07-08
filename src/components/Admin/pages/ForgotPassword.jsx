@@ -9,7 +9,7 @@ export default function ForgotPassword() {
 
   const onSubmit = (data) => {
     console.log(data);
-    navigate("/login");
+    navigate("/admin/login");
   };
 
   return (
@@ -38,7 +38,7 @@ export default function ForgotPassword() {
       <p className="text-center mt-6 text-[#6B7280] dark:text-[#D1D5DB] text-sm">
         Remembered your password?{" "}
         <button
-          onClick={() => navigate("/login")}
+          onClick={() => navigate("/admin/login")}
           className="text-[#0EA5E9] font-bold"
         >
           Login

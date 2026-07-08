@@ -20,7 +20,12 @@ import AdminUsersConfig from "../Admin/pages/AdminUsersConfig";
 import AdminDishaConfig from "../Admin/pages/AdminDishaConfig";
 import AdminKushalConnectionConfig from "../Admin/pages/AdminKushalConnectionConfig";
 
-const isAuthenticated = () => localStorage.getItem("vpp-authenticated") === "true";
+const isAuthenticated = () => {
+  const token = localStorage.getItem("vpp-token");
+  const authenticated = localStorage.getItem("vpp-authenticated") === "true";
+
+  return Boolean(token && authenticated);
+};
 
 const PublicRoute = ({ children }) => {
   return isAuthenticated() ? <Navigate to="/dashboard" replace /> : children;
