@@ -192,11 +192,7 @@ const SectionForm = ({
 
 
 
-  const onSubmit = (data) => {
-
-    console.log(`${title} saved`, data);
-
-  };
+  const onSubmit = () => {};
 
 
 
