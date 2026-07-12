@@ -6,14 +6,9 @@ import {
   Info,
   Briefcase,
   Image,
-  MessageSquare,
-  Users,
   FileText,
   GraduationCap,
   Phone,
-  Search,
-  Settings,
-  UserCog,
   Building2,
   MapPinned,
   Link,
@@ -25,15 +20,10 @@ const menus = [
   { name: "About", path: "/admin/about", icon: Info },
   { name: "Services", path: "/admin/services", icon: Briefcase },
   { name: "Gallery", path: "/admin/gallery", icon: Image },
-  { name: "Testimonials", path: "/admin/testimonials", icon: MessageSquare },
-  { name: "Team", path: "/admin/team", icon: Users },
   { name: "Blogs", path: "/admin/blogs", icon: FileText },
-  { name: "Career", path: "/admin/career", icon: GraduationCap },
+  { name: "Careers", path: "/admin/careers", icon: GraduationCap },
   { name: "Contact", path: "/admin/contact", icon: Phone },
-  { name: "SEO", path: "/admin/seo", icon: Search },
-  { name: "Settings", path: "/admin/settings", icon: Settings },
-  { name: "Users", path: "/admin/users", icon: UserCog },
-  { name: "Trade Hub", path: "/admin/tradehub", icon: Building2 },
+  { name: "Trade Hub", path: "/admin/trade-hub", icon: Building2 },
   { name: "Disha", path: "/admin/disha", icon: MapPinned },
   { name: "Kushal Connection", path: "/admin/kushal-connection", icon: Link },
 ];
@@ -42,7 +32,7 @@ export default function Sidebar({ isOpen }) {
   return (
     <div className="flex flex-col h-full">
       <div className="p-8 flex items-center gap-3 font-bold text-xl text-[#4A044E] dark:text-[#FFFFFF]">
-        <Activity size={24} className="text-[#0EA5E9] dark:text-[#60A5FA]" />
+        <Activity size={30} className="shrink-0 text-[#0EA5E9] dark:text-[#60A5FA]" />
         {isOpen && "VPP MFD"}
       </div>
 
@@ -61,7 +51,7 @@ export default function Sidebar({ isOpen }) {
                 }`
               }
             >
-              <Icon size={20} />
+              <Icon size={20} className="shrink-0" />
               {isOpen && <span className="font-semibold">{menu.name}</span>}
             </NavLink>
           );

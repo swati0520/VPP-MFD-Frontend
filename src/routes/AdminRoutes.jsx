@@ -8,15 +8,9 @@ import AdminDishaConfig from "../components/Admin/pages/AdminDishaConfig";
 import AdminGalleryConfig from "../components/Admin/pages/AdminGalleryConfig";
 import AdminHomeConfig from "../components/Admin/pages/AdminHomeConfig";
 import AdminKushalConnectionConfig from "../components/Admin/pages/AdminKushalConnectionConfig";
-import AdminSEOConfig from "../components/Admin/pages/AdminSEOConfig";
 import AdminServicesConfig from "../components/Admin/pages/AdminServicesConfig";
-import AdminSettingsConfig from "../components/Admin/pages/AdminSettingsConfig";
-import AdminTeamConfig from "../components/Admin/pages/AdminTeamConfig";
-import AdminTestimonialsConfig from "../components/Admin/pages/AdminTestimonialsConfig";
 import AdminTradeHubConfig from "../components/Admin/pages/AdminTradeHubConfig";
-import AdminUsersConfig from "../components/Admin/pages/AdminUsersConfig";
 import Dashboard from "../components/Admin/pages/Dashboard";
-import ForgotPassword from "../components/Admin/pages/ForgotPassword";
 import Login from "../components/Admin/pages/Login";
 import Signup from "../components/Admin/pages/Signup";
 
@@ -40,7 +34,6 @@ export default function AdminRoutes() {
     <Routes>
       <Route path="login" element={<PublicRoute><Login /></PublicRoute>} />
       <Route path="signup" element={<PublicRoute><Signup /></PublicRoute>} />
-      <Route path="forgot-password" element={<PublicRoute><ForgotPassword /></PublicRoute>} />
 
       <Route element={<PrivateRoute><AdminLayout /></PrivateRoute>}>
         <Route index element={<Dashboard />} />
@@ -49,15 +42,10 @@ export default function AdminRoutes() {
         <Route path="about" element={<AdminAboutConfig />} />
         <Route path="services" element={<AdminServicesConfig />} />
         <Route path="gallery" element={<AdminGalleryConfig />} />
-        <Route path="testimonials" element={<AdminTestimonialsConfig />} />
-        <Route path="team" element={<AdminTeamConfig />} />
         <Route path="blogs" element={<AdminBlogsConfig />} />
-        <Route path="career" element={<AdminCareerConfig />} />
+        <Route path="careers" element={<AdminCareerConfig />} />
         <Route path="contact" element={<AdminContactConfig />} />
-        <Route path="settings" element={<AdminSettingsConfig />} />
-        <Route path="seo" element={<AdminSEOConfig />} />
-        <Route path="tradehub" element={<AdminTradeHubConfig />} />
-        <Route path="users" element={<AdminUsersConfig />} />
+        <Route path="trade-hub" element={<AdminTradeHubConfig />} />
         <Route path="disha" element={<AdminDishaConfig />} />
         <Route path="kushal-connection" element={<AdminKushalConnectionConfig />} />
       </Route>

@@ -1,11 +1,15 @@
-/* eslint-disable react/prop-types */
-
 import { forwardRef } from "react";
 import { UploadCloud } from "lucide-react";
 
 const ImageUpload = forwardRef(
   ({ label, error, className = "", register, name, validation, ...fieldProps }, ref) => {
-    const registerProps = register && name ? register(name, validation) : {};
+    const imageValidation = validation || {
+      validate: {
+        fileType: (files) => !files?.length || ["image/jpeg", "image/png", "image/webp"].includes(files[0].type) || "Use a JPG, PNG, or WEBP image.",
+        fileSize: (files) => !files?.length || files[0].size <= 2 * 1024 * 1024 || "Image size must be 2 MB or less.",
+      },
+    };
+    const registerProps = register && name ? register(name, imageValidation) : {};
 
     const setRefs = (element) => {
       registerProps.ref?.(element);
